@@ -1,4 +1,4 @@
-class Solution {
+class HappyNumbers {
         public boolean isHappy(int n) {
             boolean isHappy = false;
             int sum = 0;
@@ -37,6 +37,5 @@ class Solution {
 
             }
             return false;
-
             }
             }
