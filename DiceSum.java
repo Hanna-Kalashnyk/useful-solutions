@@ -1,5 +1,9 @@
 class DiceSum
 {
+    public static void main(String[] args)
+    {
+        System.out.println(numRollsToTarget(2, 3, 1 ));
+    }
     public int numRollsToTarget(int n, int k, int target)
     {
 
@@ -22,12 +26,17 @@ class DiceSum
     }
 }
 
-//In this solution, we use dynamic programming to calculate the number of possible ways to roll the dice to get a sum of target.
+//In this solution, we use dynamic programming to calculate the number of possible ways to roll
+// the dice to get a sum of target.
 //    We use a 2D array dp to store the number of ways to roll i dice to get a sum of j.
 //
-//    To fill in the dp array, we use a nested loop that iterates over the number of dice i, the target sum j,
-//    and the possible face-up numbers of each die l. We calculate the number of ways to roll i-1 dice to get a sum of j-l,
-//    and add this to the number of ways to roll i dice to get a sum of j. We take the result modulo 10^9+7 to ensure
+//    To fill in the dp array, we use a nested loop that iterates over the number of dice i,
+//    the target sum j,
+//    and the possible face-up numbers of each die l. We calculate the number of ways to roll
+//    i-1 dice to get a sum of j-l,
+//    and add this to the number of ways to roll i dice to get a sum of j. We take the result
+//    modulo 10^9+7 to ensure
 //    that the answer doesn't overflow.
 //
-//    Finally, we return dp[n][target], which represents the number of possible ways to roll n dice to get a sum of target.
+//    Finally, we return dp[n][target], which represents the number of possible ways to roll n
+//    dice to get a sum of target.

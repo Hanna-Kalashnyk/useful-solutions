@@ -1,4 +1,4 @@
-class GoodWodrs
+class GoodWords
 {
     public int countCharacters(String[] words, String chars)
     {

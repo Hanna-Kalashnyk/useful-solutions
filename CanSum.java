@@ -28,7 +28,7 @@ class CanSum
                 if ( target == num )
                 {
                     memo.put(target - num, memo.get(target - num) + 1);
-                    return rez++;
+                    rez++;
                 }
             }
 

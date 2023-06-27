@@ -14,17 +14,16 @@ public class LinkedListCicle
  */
 
     public ListNode detectCycle(ListNode head) {
-
-        HashMap<ListNode, ListNode> map = new HashMap<>();
-        ListNode pos = null;
-        while (head != null)
-        {
-            if (map.containsKey(head.next))
+        Set<ListNode> set = new HashSet<ListNode>();
+        while(head != null){
+            if (set.contains(head)){
+                return  true;
+            }else
             {
-                return head.next;
+                set.add(head);
             }
-            map.put(head, head.next);
             head = head.next;
-        }return  pos;
+        }
+        return false;
     }
 }

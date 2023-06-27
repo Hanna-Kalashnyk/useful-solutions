@@ -23,18 +23,18 @@ public class ReverseLinkedList
         head.next = null;
         return p;
     }
-    
-        public ListNode reverseListNoRecursion(ListNode head) {
-        ListNode prev = null;  
+
+    public ListNode reverseList1(ListNode head) {
+        ListNode prev = null;
         ListNode current = head;
-    
-        
-        while(current != null) { 
-            ListNode next = current.next; 
+
+
+        while(current != null) {
+            ListNode next = current.next;
             current.next = prev;
             prev = current;
             current = next;
         }
-       return prev; 
+        return prev;
     }
 }
