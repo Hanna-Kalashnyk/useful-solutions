@@ -1,3 +1,4 @@
+package leetcode;
 import java.util.HashSet;
 
 class HappyNumbers
@@ -26,12 +27,11 @@ class HappyNumbers
 
         return isHappy;
     }
-
-}
+    
 
     public boolean isHappy2(int n)
     {
-        Set<Integer> inLoop = new HashSet<Integer>();
+        HashSet<Integer> inLoop = new HashSet<Integer>();
         int squareSum, d;
         while ( inLoop.add(n) )
         {
