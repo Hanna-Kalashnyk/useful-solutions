@@ -5,7 +5,7 @@
 //A substring is a contiguous sequence of characters within the string.
 package leetcode;
 
-public class PalindromicSubstrings6467
+public class PalindromicSubstrings6467{
 	int count=0;
 	public int countSubstringsTheBest(String s) {
 		for (int start = 0; start < s.length(); start++) {
@@ -22,9 +22,7 @@ public class PalindromicSubstrings6467
 		}
 	}
 
-	
-	
-{
+
 	public int countSubstrings2(String S) {
 		
 		int len = S.length(), ans = 0;
