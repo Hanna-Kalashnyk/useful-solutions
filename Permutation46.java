@@ -22,9 +22,9 @@ public class Permutation46 {
         }
 
         for (int i = start; i < nums.length; i++) {
-             swap(start, i, nums);
+            swap(start, i, nums);
             backTracking(nums, rez, start +1);
-             swap(start, i, nums);
+            swap(start, i, nums);
         }
     }
 

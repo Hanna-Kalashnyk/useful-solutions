@@ -10,19 +10,26 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CombinationSum40 {
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         Arrays.sort(candidates);
         List<List<Integer>> rez = new ArrayList<>();
         compositionSum(rez, candidates, target, 0, new ArrayList<Integer>());
-        return rez;
+
+        return rez.stream()
+                .distinct()
+                .collect(Collectors.toList());
     }
 
     private void compositionSum(List<List<Integer>> rez, int[] candidates, int target, int index, List<Integer> tempList) {
-        if (tempList.stream().mapToInt(Integer::valueOf).sum() == target) {
-            rez.add(new ArrayList<>(tempList)); // Add a copy of tempList to the result
-            return; // Return to avoid further unnecessary recursion
+
+        if (target < 0) return;
+        if (target == 0) {
+
+            rez.add(new ArrayList<>(tempList));
+            return;
         }
         for (int i = index; i < candidates.length; i++) {
             // Skip duplicates
@@ -32,7 +39,7 @@ public class CombinationSum40 {
 
             if (candidates[i] <= target) {
                 tempList.add(candidates[i]);
-                compositionSum(rez, candidates, target, i + 1, tempList);
+                compositionSum(rez, candidates, target - candidates[i], i + 1, tempList);
                 tempList.remove(tempList.size() - 1);
             }
         }
