@@ -1,5 +1,8 @@
-package leetcode.demo.problems;// simple spiral walk around all nxm matrix from [0,0] to center
+package leetcode.demo.problems;
 
+/*
+ *  simple spiral walk around all nxm matrix from [0,0] to center
+ */
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +42,7 @@ class SpiralNumbers
             return;
         }
 
-        if ( length == 1 && height > 1 )
+        if ( length == 1 )
         {
             oneDimentionMassive(matrix, n, m, result, 1, height);
 
