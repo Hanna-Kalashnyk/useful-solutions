@@ -11,13 +11,11 @@ public class WordSearch79 {
     boolean[][] visited;
 
     public boolean exist(char[][] board, String word) {
-        int index = 0;
         visited = new boolean[board.length][board[0].length];
         chars = word.toCharArray();
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[0].length; j++) {
-                if (board[i][j] == word.charAt(0) &&
-                        findNext(board, i, j, 0, visited)) return true;
+                if (board[i][j] == word.charAt(0) && findNext(board, i, j, 0, visited)) return true;
             }
         }
         return false;
@@ -35,10 +33,7 @@ public class WordSearch79 {
         visited[i][j] = true;
 
         // Explore in all four directions
-        boolean found = findNext(board, i + 1, j, index + 1, visited)
-                || findNext(board, i - 1, j, index + 1, visited)
-                || findNext(board, i, j + 1, index + 1, visited)
-                || findNext(board, i, j - 1, index + 1, visited);
+        boolean found = findNext(board, i + 1, j, index + 1, visited) || findNext(board, i - 1, j, index + 1, visited) || findNext(board, i, j + 1, index + 1, visited) || findNext(board, i, j - 1, index + 1, visited);
 
         visited[i][j] = false; // Backtrack
         return found;
