@@ -1,7 +1,6 @@
 package leetcode.demo.problems;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.PriorityQueue;
 
@@ -12,7 +11,6 @@ import java.util.PriorityQueue;
  */
 public class LongeatConsecutiveSequence128 {
     public int longestConsecutive(int[] nums) {
-        List<Integer> rez = new ArrayList<>();
         PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> (b - a));
         for (int num : nums) {
             pq.offer(num);
