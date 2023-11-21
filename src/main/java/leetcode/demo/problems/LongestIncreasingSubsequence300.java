@@ -7,25 +7,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class LongestIncreasingSubsequence300 {
-//	public int lengthOfListContiniousWithoutSkips(int[] nums)
-//	{
-//		int max = 0;
-//		int start = 0;
-//		for (int i = 1; i < nums.length; i++)
-//		{
-//			if (nums[i] <= nums[i - 1])
-//			{
-//				max = Math.max(max, i - start);
-//				start = i;
-//			}
-//			if (i == nums.length && nums[i] > nums[i - 1])
-//			{
-//				max = Math.max(max, i - start + 1);
-//			}
-//		}
-//		return max;
-//	}
-
     public int lengthOfIncreasingList(int[] nums) {
         int n = nums.length;
         ArrayList<Integer> list = new ArrayList<>();
@@ -107,26 +88,4 @@ public class LongestIncreasingSubsequence300 {
 //		return size;
 //	}}
 
-//time complexity n*n
-//
-//class Solution {
-//    public int lengthOfLIS(int[] nums) {
-//        int n = nums.length;
-//        if (n == 0) return 0;
-//
-//        int[] dp = new int[n];
-//        Arrays.fill(dp, 1);
-//        int max = 1;
-//
-//        for (int i = 1; i < n; i++) {
-//            for (int j = 0; j < i; j++) {
-//                if (nums[i] > nums[j]) {
-//                    dp[i] = Math.max(dp[i], dp[j] + 1);
-//                }
-//            }
-//            max = Math.max(max, dp[i]);
-//        }
-//
-//        return max;
-//    }
-//}
+

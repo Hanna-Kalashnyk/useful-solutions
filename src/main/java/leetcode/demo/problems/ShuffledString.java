@@ -15,10 +15,10 @@ class ShuffledString{
 		}
 		PriorityQueue<Map.Entry<Integer, Character>> priorityQueue = new PriorityQueue<>((a, b) -> a.getKey() - b.getKey());
 		
-		for (Map.Entry<Integer, Character> entry : map.entrySet()) {
-			priorityQueue.offer(entry);
-		}
-		
+//		for (Map.Entry<Integer, Character> entry : map.entrySet()) {
+//			priorityQueue.offer(entry);
+//		}
+		priorityQueue.addAll(map.entrySet());
 		while (!priorityQueue.isEmpty()) {
 			sb.append(priorityQueue.poll().getValue());
 		}

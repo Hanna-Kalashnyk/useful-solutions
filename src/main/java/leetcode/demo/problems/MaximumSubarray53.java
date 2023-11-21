@@ -5,7 +5,7 @@ package leetcode.demo.problems;
 
 public class MaximumSubarray53
 {
-	public int maxSubArray(int[] nums)
+		public int maxSubArray(int[] nums)
 	{
 		int max = 0;
 		int curr = 0;

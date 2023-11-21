@@ -12,6 +12,7 @@ package leetcode.demo.problems;
 public class HouseRobber198 {
     public int rob(int[] nums) {
         int n = nums.length;
+        if ( n == 1) return nums[0];
         int[] da = new int[n];
         da[0] = nums[0];
         da[1] = Math.max(nums[0], nums[1]);
