@@ -15,13 +15,13 @@ class LongestSubstringWithoutRepeatingCharacters3Test {
 
     @Test
     void lengthOfLongestSubstring() {
-        s = "Hello";
+        String s = "Hello";
         Assertions.assertEquals(3, inst.lengthOfLongestSubstring1(s));
     }
 
     @Test
     void lengthOfLongestSubstring1() {
-        s = "Hello";
+        String s = "Hello";
         Assertions.assertEquals(3, inst.lengthOfLongestSubstring1(s));
     }
 }
