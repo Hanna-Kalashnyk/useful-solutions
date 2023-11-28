@@ -13,6 +13,6 @@ class LongestUnrepetableStringTest {
     @Test
     void characterReplacement() {
         String s = "VAAFDTE";
-        Assertions.assertEquals(4, inst.characterReplacement(s, 2));
+        Assertions.assertEquals(5, inst.lengthOfLongestSubstring(s));
     }
 }
