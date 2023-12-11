@@ -24,7 +24,7 @@ public class FindPeeElement126 {
                 return m;
             } else if (nums[m - 1] > nums[m]) {
                 j = m;
-            } else if (nums[m + 1] > 1) i = m;
+            } else if (nums[m + 1] > nums[m]) i = m;
         }
         return i;
     }
